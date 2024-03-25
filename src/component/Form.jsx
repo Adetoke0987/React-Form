@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 
 const Form = () => {
-    const [userName, SetUsername] = useState("");
-    const [email, SetEmail] = useState("");
-    const [password, SetPassword] = useState("");
+    const [formData, setFormData] = useState({
+        userName:'',
+        email:'',
+        password:'',
+
+    })
+
+    // const [userName, SetUsername] = useState("");
+    // const [email, SetEmail] = useState("");
+    // const [password, SetPassword] = useState("");
     const [error, SetError] = useState({});
 
     useEffect(() => {
@@ -50,11 +57,11 @@ const Form = () => {
                 <button type="submit">SUBMIT</button>
             </form>
 
-                <div>
+                {/* <div>
                     <div>{userName}</div>
                     <div>{email}</div>
                     <div>{password}</div>
-                </div>
+                </div> */}
             </div>
         </>
     );
